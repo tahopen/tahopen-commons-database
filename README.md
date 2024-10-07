@@ -1,4 +1,4 @@
-# Pentaho Commons Database
+# Tahopen Commons Database
 
 ### Project Structure
   
