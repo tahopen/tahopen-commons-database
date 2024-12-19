@@ -31,15 +31,51 @@
   <properties>
     <license.licenseName>lgpl_v2_1</license.licenseName>
   </properties>
-<!--
   <scm>
-    <developerConnection>scm:git:git@github.com:pentaho/pentaho-commons-database.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:tahopen/tahopen-commons-database.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
--->
+
   <repositories>
 
   </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M1</version>
+      </plugin>
+      
+     <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>3.0.1</version>
+            <executions>
+                <execution>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>sign</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>      
+
+
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>maven-central</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>maven-central-snapshots</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <pluginRepositories>
 
