@@ -1,0 +1,7 @@
+org.pentaho.database.service
+org.pentaho.database.util
+org.pentaho.ui.database
+org.pentaho.ui.database.event
+org.pentaho.ui.database.gwt
+org.pentaho.ui.database.services
+org.pentaho.ui.util

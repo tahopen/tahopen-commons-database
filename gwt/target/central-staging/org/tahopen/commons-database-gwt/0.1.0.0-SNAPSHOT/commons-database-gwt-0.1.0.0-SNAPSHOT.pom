@@ -81,14 +81,12 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>org.pentaho</groupId>
       <artifactId>pentaho-encryption-support</artifactId>
       <version>${encryption-support.version}</version>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
       <groupId>pentaho-kettle</groupId>
       <artifactId>kettle-engine</artifactId>
@@ -105,7 +103,6 @@
       <artifactId>commons-xul-core</artifactId>
       <version>${commons-xul.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>commons-xul-swing</artifactId>
@@ -117,7 +114,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>commons-xul-swt</artifactId>
@@ -129,7 +125,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>commons-xul-gwt-impl</artifactId>
@@ -170,7 +165,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>commons-beanutils</groupId>
       <artifactId>commons-beanutils</artifactId>
@@ -182,13 +176,10 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>commons-logging</groupId>
       <artifactId>commons-logging</artifactId>
-      <version>2.6</version>
     </dependency>
-
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
@@ -212,7 +203,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>org.eclipse.core</groupId>
       <artifactId>runtime</artifactId>
@@ -224,7 +214,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>org.eclipse.equinox</groupId>
       <artifactId>common</artifactId>
@@ -236,7 +225,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>org.eclipse.core</groupId>
       <artifactId>commands</artifactId>
@@ -260,7 +248,6 @@
     <dependency>
       <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>4.0.2</version>
     </dependency>
 
     <!-- test dependencies -->
@@ -269,53 +256,45 @@
       <artifactId>gwt-dev</artifactId>
       <scope>test</scope>
     </dependency>
-    
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-all</artifactId>
       <version>1.9.5</version>
       <scope>test</scope>
     </dependency>
-    
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-vfs2</artifactId>
       <scope>test</scope>
     </dependency>
-    
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
       <scope>test</scope>
     </dependency>
-    
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>${guava.version}</version>
       <scope>test</scope>
     </dependency>
-    
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <scope>test</scope>
     </dependency>
-    
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.10</version>
       <scope>test</scope>
     </dependency>
-    
     <dependency>
       <groupId>org.hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
       <version>2.3.2</version>
       <scope>test</scope>
     </dependency>
-    
   </dependencies>
   
   <build>
