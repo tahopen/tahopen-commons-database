@@ -12,14 +12,14 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>commons-database</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
 
   <properties>
-    <commons-xul.version>0.1.0.0-SNAPSHOT</commons-xul.version>
-    <commons-gwt.version>0.1.0.0-SNAPSHOT</commons-gwt.version>
-    <pdi.version>9.4.0.0-SNAPSHOT</pdi.version>
-    <encryption-support.version>9.4.0.0-SNAPSHOT</encryption-support.version>
+    <commons-xul.version>0.1.0.0</commons-xul.version>
+    <commons-gwt.version>0.1.0.0</commons-gwt.version>
+    <pdi.version>0.1.0.0</pdi.version>
+    <encryption-support.version>0.1.0.0</encryption-support.version>
   </properties>
 
   <developers>
@@ -71,7 +71,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>pentaho-kettle</groupId>
+      <groupId>tahopen-kettle</groupId>
       <artifactId>kettle-core</artifactId>
       <version>${pdi.version}</version>
       <exclusions>
@@ -83,14 +83,14 @@
     </dependency>
 
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-encryption-support</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-encryption-support</artifactId>
       <version>${encryption-support.version}</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>pentaho-kettle</groupId>
+      <groupId>tahopen-kettle</groupId>
       <artifactId>kettle-engine</artifactId>
       <version>${pdi.version}</version>
       <exclusions>
@@ -320,7 +320,8 @@
   
   <build>
     <plugins>
-        
+       
+      <!-- publish to maven central --> 
       <plugin>
          <groupId>org.sonatype.central</groupId>
          <artifactId>central-publishing-maven-plugin</artifactId>
@@ -337,6 +338,8 @@
         <version>3.0.1</version>
         <executions>
           <execution>
+            <id>sign-artifacts</id>
+            <phase>deploy</phase>            
             <goals>
               <goal>sign</goal>
             </goals>
@@ -385,43 +388,18 @@
     </plugins>
   </build>
 
-  <distributionManagement>
+ <distributionManagement>
 
- <repository>
-    <id>ossrh</id>
-    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-  </repository>
-  <snapshotRepository>
-    <id>ossrh</id>
-    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-  </snapshotRepository>
-
-
-<!--
     <repository>
-      <id>maven-central</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
-
-    <snapshotRepository>
-      <id>maven-central-snapshots</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-    </snapshotRepository>
--->
     
-  </distributionManagement>
-  
-<profiles>
-  <profile>
-    <id>release</id>
-    <activation>
-      <activeByDefault>false</activeByDefault>
-    </activation>
-    <properties>
-      <gpg.executable>gpg</gpg.executable>
-      <gpg.passphraseServerId>gpg.passphrase</gpg.passphraseServerId>
-    </properties>
-  </profile>
-</profiles>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    
+  </distributionManagement>  
     
 </project>

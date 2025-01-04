@@ -2,16 +2,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-  <artifactId>commons-database-model</artifactId>
-
-  <name>Commons Database Model</name>
-
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>commons-database</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
+
+  <artifactId>commons-database-model</artifactId>
+  <name>Commons Database Model</name>
+  <url>http://www.tahopen.org</url>
+  <description>Commons Database Model.</description>  
+
+  <scm>
+    <connection>scm:git:git://github.com/tahopen/tahopen-commons-database.git</connection>
+    <developerConnection>scm:git:git@github.com:tahopen/tahopen-commons-database.git</developerConnection>
+    <url>https://github.com/tahopen/tahopen-commons-database</url>
+  </scm>  
+  
+  <developers>
+    <developer>
+      <id>marciojv</id>
+      <name>Marcio Junior Vieira</name>
+      <email>marcio@tahopen.org</email>
+    </developer>
+  </developers>
 
   <dependencies>
     <dependency>
@@ -48,4 +62,5 @@
       <version>2.9.0</version>
     </dependency>
   </dependencies>
+    
 </project>
